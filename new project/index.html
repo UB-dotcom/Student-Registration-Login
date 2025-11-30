@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Student Registration Form</h1>
+</header>
+<main>
+  <section class="form-container">
+    <form id="registrationForm" action="#" method="post" autocomplete="on">
+      <!-- Row: Roll number -->
+      <div class="form-row">
+        <label for="rollNumber">Roll number</label>
+        <input id="rollNumber" name="rollNumber" type="text" pattern="\d+" inputmode="numeric" required placeholder="e.g. 12345" title="Numbers only">
+      </div>
+
+      <!-- Row: Name -->
+      <div class="form-row name-row">
+        <label for="firstName">Full Name</label>
+        <input id="firstName" name="firstName" type="text" required placeholder="First name">
+        <input id="lastName" name="lastName" type="text" required placeholder="Last name">
+      </div>
+
+      <!-- Row: Email -->
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+      </div>
+
+      <!-- Row: Date of birth -->
+      <div class="form-row">
+        <label for="dob">Date of birth</label>
+        <input id="dob" name="dob" type="date" required>
+      </div>
+
+      <!-- Row: Gender -->
+      <fieldset class="form-row inline-group">
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </fieldset>
+
+      <!-- Row: Phone -->
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" pattern="[0-9]{10}" inputmode="tel" placeholder="10 digit phone" required>
+      </div>
+
+      <!-- Row: Course -->
+      <div class="form-row">
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+          <option value="">Select a course</option>
+          <option value="bca">BCA</option>
+          <option value="bsc">BSc</option>
+          <option value="bcom">BCom</option>
+          <option value="mca">MCA</option>
+        </select>
+      </div>
+
+      <!-- Row: Address -->
+      <div class="form-row">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Street, City, State, PIN" required></textarea>
+      </div>
+
+      
+      <!-- Terms -->
+      <div class="form-row">
+        <label class="checkbox">
+          <input id="terms" name="terms" type="checkbox" required>
+          I agree to the terms and conditions
+        </label>
+      </div>
+
+      <!-- Buttons -->
+      <div class="form-row buttons">
+        <button type="submit">Register</button>
+        <button type="reset" class="secondary">Reset</button>
+      </div>
+      <!-- Already registered -> Login link -->
+      <div class="form-row login-row">
+        <p class="muted">Already registered? <a href="login.html" class="login-link">Login here</a></p>
+      </div>
+
+    </form>
+  </section>
+</main>
+<!-- added: include client script -->
+<script src="script.js" defer></script>
+</body>
+</html>

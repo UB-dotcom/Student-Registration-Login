@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login - Student Registration</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header>
+    <h1>Student Login</h1>
+  </header>
+
+  <main>
+    <section class="form-container">
+      <form id="loginForm" action="#" method="post" autocomplete="on">
+        <div class="form-row">
+          <label for="identifier">Email or Roll number</label>
+          <input id="identifier" name="identifier" type="text" required placeholder="you@example.com or 12345">
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Password (optional)">
+        </div>
+
+        <div class="form-row">
+          <button type="submit">Login</button>
+         
+          <a class="secondary-link" href="index.html"> First time? Register</a>
+        </div>
+
+        <div id="message" class="form-row" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="login.js" defer></script>
+</body>
+</html>
